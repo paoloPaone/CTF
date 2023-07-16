@@ -1,0 +1,49 @@
+Source: ctf-gameserver
+Section: education
+Priority: optional
+Maintainer: Christoph Egger <christoph.egger@fau.de>
+Build-Depends:
+ debhelper (>= 10),
+ dh-python,
+ curl,
+ python3,
+ python3-all,
+ python3-django,
+ python3-markdown,
+ python3-pil,
+ python3-setuptools,
+ python3-tz,
+ unzip
+Standards-Version: 4.3.0
+Homepage: http://ctf-gameserver.org
+
+Package: ctf-gameserver
+Architecture: all
+Section: python
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+# ctf-gameserver brings its own JQuery, but python3-django requires Debian's JQUery (for the admin interface)
+# and it's only a "Recommend" there
+ libjs-jquery,
+ procps,
+ python3-configargparse,
+ python3-django,
+ python3-markdown,
+ python3-pil,
+ python3-prometheus-client,
+ python3-psycopg2,
+ python3-tz,
+ python3-requests,
+ python3-systemd
+Recommends:
+ python3-graypy,
+ sudo,
+ systemd,
+ uwsgi | libapache2-mod-wsgi | httpd-wsgi
+Description: FAUST CTF Gameserver
+ Gameserver implementation for Attack/Defense Capture the Flag (CTF)
+ competitions. Used by and originally developed for FAUST CTF.
+ .
+ This package contains all components required to set up a Gameserver
+ instance.

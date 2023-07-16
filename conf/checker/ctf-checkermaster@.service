@@ -1,0 +1,25 @@
+[Unit]
+Description=CTF Gameserver Checker Master
+After=postgresql.service
+
+[Service]
+Type=notify
+User=ctf-checkermaster
+EnvironmentFile=/etc/ctf-gameserver/checkermaster.env
+EnvironmentFile=-/etc/ctf-gameserver/checker/%i.env
+ExecStart=/usr/bin/ctf-checkermaster
+# Allow waiting for Checker Scripts to finish
+TimeoutStopSec=90
+Restart=on-failure
+RestartSec=5
+SyslogIdentifier=ctf-checkermaster@%I
+
+# Security options, cannot use any which imply `NoNewPrivileges` because Checker Scripts can get executed
+# using sudo
+PrivateTmp=yes
+ProtectControlGroups=yes
+ProtectHome=yes
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+conf/checker/checkermaster.env etc/ctf-gameserver
+conf/checker/ctf-checkermaster@.service lib/systemd/system
+examples/checker/sudoers.d/ctf-checker etc/sudoers.d
+
+conf/controller/controller.env etc/ctf-gameserver
+conf/controller/ctf-controller.service lib/systemd/system
+
+conf/submission/submission.env etc/ctf-gameserver
+conf/submission/ctf-submission@.service lib/systemd/system
+
+conf/web/prod_settings.py etc/ctf-gameserver/web
