@@ -17,14 +17,14 @@ if __name__ == '__main__':
     import socket
     
     # Modifica l'indirizzo IP e la porta a cui il server si collega
-    addr = '172.17.0.1'  # Modifica l'indirizzo IP
+    addr = '0.0.0.0'  # Modifica l'indirizzo IP
     port = 8000  # Modifica la porta
 
     # Imposta l'indirizzo IP e la porta come variabili d'ambiente per Django
     os.environ["RUNSERVER_ADDR"] = addr
     os.environ["RUNSERVER_PORT"] = str(port)
     
-    runserver.default_addr = '172.17.0.1'
+    runserver.default_addr = '0.0.0.0'
     runserver.default_port = '8000'
     runserver.default_ipv6 = False
     
