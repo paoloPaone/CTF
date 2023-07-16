@@ -24,7 +24,7 @@ if __name__ == '__main__':
     os.environ["RUNSERVER_ADDR"] = addr
     os.environ["RUNSERVER_PORT"] = str(port)
     
-    runserver.default_addr = '172.17.0.2''
+    runserver.default_addr = '172.17.0.2'
     runserver.default_port = '8000'
     runserver.default_ipv6 = False
     
