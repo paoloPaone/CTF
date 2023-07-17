@@ -3,21 +3,20 @@
 import os
 import sys
 import socket
-from django.utils.regex_helper import _lazy_re_compile
-import django.http.request
 
 if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ctf_gameserver.web.dev_settings')
-
-    # Sovrascrive la regex di convalida dell'host
-    django.http.request.host_validation_re = _lazy_re_compile(r"[a-zA-z0-9.:]*")
-
+    
     # Modifica l'indirizzo IP e la porta a cui il server si collega
     # da 127.0.0.1:8000 a 172.17.0.2:8000
     from django.core.management import execute_from_command_line
     from django.core.servers.basehttp import get_internal_wsgi_application
     from django.core.management.commands.runserver import Command as runserver
+    
 
+
+    
+    # Modifica l'indirizzo IP e la porta a cui il server si collega
     addr = '172.17.0.2'  # Modifica l'indirizzo IP
     port = 8000  # Modifica la porta
 
