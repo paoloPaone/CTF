@@ -1,6 +1,3 @@
-
-import os
-
 """
 Django and project specific settings for usage in production.
 Edit this file and adjust the options to your own requirements! You may also set additional options from
@@ -85,7 +82,7 @@ SECRET_KEY = ''
 
 # Insert all hostnames your site is available under
 # See https://docs.djangoproject.com/en/1.8/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = ['0.0.0.0','172.17.0.2']
 
 # The name of the time zone (i.e. something like "Europe/Berlin") in which dates should be displayed
 # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for a list of valid options
@@ -119,7 +116,7 @@ LOGGING = {
     }
 }
 
-DEBUG = False
+DEBUG = True
 
 if HTTPS:
     CSRF_COOKIE_SECURE = True
