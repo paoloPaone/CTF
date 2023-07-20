@@ -8,6 +8,13 @@ options.
 from .base_settings import *
 
 
+
+
+
+
+
+
+
 CSP_POLICIES = {
     # The debug error page uses inline JavaScript and CSS
     'script-src': ["'self'", "'unsafe-inline'"],
@@ -43,6 +50,8 @@ SECRET_KEY = 'OnlySuitableForDevelopment'    # nosec
 TIME_ZONE = 'UTC'
 FIRST_DAY_OF_WEEK = 1
 
+
+ALLOWED_HOSTS = ['0.0.0.0','172.17.0.2','127.0.0.1']
 
 DEBUG = True
 INTERNAL_IPS = ['127.0.0.1']
