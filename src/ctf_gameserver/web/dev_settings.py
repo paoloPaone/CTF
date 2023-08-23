@@ -51,9 +51,11 @@ TIME_ZONE = 'UTC'
 FIRST_DAY_OF_WEEK = 1
 
 
-ALLOWED_HOSTS = ['0.0.0.0','172.17.0.2','127.0.0.1']
+ALLOWED_HOSTS = ['0.0.0.0','172.17.0.2','127.0.0.1','localhost']
 
 DEBUG = True
 INTERNAL_IPS = ['127.0.0.1']
+
+
 
 GRAYLOG_SEARCH_URL = 'http://localhost:9000/search'
