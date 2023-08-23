@@ -30,11 +30,11 @@ HTTPS = False
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': '',
-        'PORT': '',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'NAME': 'faustctf',
+        'USER': 'faustctf',
+        'PASSWORD': 'faustctf',
         'CONN_MAX_AGE': 60
     }
 }
@@ -78,15 +78,15 @@ TEAM_DOWNLOADS_ROOT = ''
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
 # A long, random string, which you are supposed to keep secret
-SECRET_KEY = ''
+SECRET_KEY = 'paolo'
 
 # Insert all hostnames your site is available under
 # See https://docs.djangoproject.com/en/1.8/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['0.0.0.0','172.17.0.2']
+ALLOWED_HOSTS = []
 
 # The name of the time zone (i.e. something like "Europe/Berlin") in which dates should be displayed
 # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for a list of valid options
-TIME_ZONE = ''
+TIME_ZONE = 'Europe/Rome'
 
 # First day of the week: 0 means Sunday, 1 means Monday and so on
 FIRST_DAY_OF_WEEK = 1
@@ -117,6 +117,8 @@ LOGGING = {
 }
 
 DEBUG = True
+
+
 
 if HTTPS:
     CSRF_COOKIE_SECURE = True
