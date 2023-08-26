@@ -5,7 +5,7 @@ import sys
 import socket
 
 if __name__ == '__main__':
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ctf_gameserver.web.dev_settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ctf_gameserver.web.prod_settings')
     
     # Modifica l'indirizzo IP e la porta a cui il server si collega
     # da 127.0.0.1:8000 a 172.17.0.2:8000
@@ -16,6 +16,10 @@ if __name__ == '__main__':
 
 
     
+    # Modifica l'indirizzo IP e la porta a cui il server si collega
+    addr = '172.17.0.5'  # Modifica l'indirizzo IP
+    port = 8000  # Modifica la porta
+
     # Imposta l'indirizzo IP e la porta come variabili d'ambiente per Django
     os.environ["RUNSERVER_ADDR"] = addr
     os.environ["RUNSERVER_PORT"] = str(port)
