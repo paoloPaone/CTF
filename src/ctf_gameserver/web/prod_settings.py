@@ -33,7 +33,7 @@ DATABASES = {
         'HOST': '10.20.0.1',
         'PORT': '5432',
         'NAME': 'faustctf',
-        'USER': 'postgres',
+        'USER': 'faustctf',
         'PASSWORD': 'password',
         'CONN_MAX_AGE': 20
     }
