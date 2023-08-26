@@ -33,9 +33,9 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432',
         'NAME': 'faustctf',
-        'USER': 'faustctf',
-        'PASSWORD': 'faustctf',
-        'CONN_MAX_AGE': 60
+        'USER': 'postgres',
+        'PASSWORD': 'password',
+        'CONN_MAX_AGE': 20
     }
 }
 
