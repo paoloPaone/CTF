@@ -13,6 +13,12 @@ from django.contrib.messages import constants as messages
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
+
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
 HOME_URL = reverse_lazy('home_flatpage')
 THUMBNAIL_SIZE = (100, 100)
 
@@ -63,12 +69,11 @@ TEMPLATES = [{
     }
 }]
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 ROOT_URLCONF = 'ctf_gameserver.web.urls'
 WSGI_APPLICATION = 'ctf_gameserver.web.wsgi.application'
 
-STATIC_URL = '/static/'
 MEDIA_URL = '/uploads/'
 LOGIN_URL = '/auth/login/'
 LOGOUT_URL = '/auth/logout/'
