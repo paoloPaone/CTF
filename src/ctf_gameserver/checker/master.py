@@ -393,7 +393,9 @@ class MasterLoop:
         local_tasks = math.ceil(total_tasks / self.checker_count)
 
         margin_seconds = self.tick_duration.total_seconds() / 6
-        launch_timeframe = max(self.tick_duration.total_seconds() - check_duration - margin_seconds, 0)
+        #launch_timeframe = max(self.tick_duration.total_seconds() - check_duration - margin_seconds, 0)
+        # Converti check_duration in un float prima di sottrarlo
+        launch_timeframe = max(float(self.tick_duration.total_seconds()) - float(check_duration) - margin_seconds, 0)
 
         intervals_per_timeframe = math.floor(launch_timeframe / self.interval) + 1
         self.tasks_per_launch = math.ceil(local_tasks / intervals_per_timeframe)
