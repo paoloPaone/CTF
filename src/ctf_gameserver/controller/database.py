@@ -39,7 +39,7 @@ def increase_tick(db_conn, prohibit_changes=False):
 def cancel_checks(db_conn, prohibit_changes=False):
 
     with transaction_cursor(db_conn, prohibit_changes) as cursor:
-        cursor.execute('UPDATE scoring_gamecontrol SET cancel_checks = 1')
+        cursor.execute('UPDATE scoring_gamecontrol SET cancel_checks = true')
 
 
 def update_scoring(db_conn):
