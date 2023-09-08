@@ -1,6 +1,6 @@
 [Unit]
 Description=CTF Gameserver Controller
-After=postgresql.service
+After=network.target
 
 [Service]
 Type=notify
@@ -8,7 +8,7 @@ DynamicUser=yes
 # Python breaks without HOME environment variable and with `DynamicUser`
 Environment=HOME=/tmp
 EnvironmentFile=/etc/ctf-gameserver/controller.env
-ExecStart=/usr/bin/ctf-controller
+ExecStart=/usr/local/lib/python3.11/dist-packages/ctf_gameserver/controller/
 Restart=on-failure
 RestartSec=5
 
