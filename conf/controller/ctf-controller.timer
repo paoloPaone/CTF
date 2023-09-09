@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer per avviare il Controller a un minuto dal boot
+After=network.target
+
+[Timer]
+OnBootSec=1min
+Unit=ctf-gameserver-controller.service
+
+[Install]
+WantedBy=multi-user.target
