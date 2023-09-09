@@ -5,7 +5,7 @@ After=postgresql.service
 [Service]
 Type=notify
 User=ctf-checkermaster
-EnvironmentFile=/etc/ctf-gameserver/checkermaster.env
+EnvironmentFile=/etc/ctf-gameserver/checkermaster/checkermaster.env
 EnvironmentFile=-/etc/ctf-gameserver/checker/%i.env
 ExecStart=/usr/local/bin/ctf-checkermaster
 # Allow waiting for Checker Scripts to finish
