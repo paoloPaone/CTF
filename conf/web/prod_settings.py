@@ -30,12 +30,12 @@ HTTPS = False
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'localhost',
+        'HOST': '10.20.0.1',
         'PORT': '5432',
         'NAME': 'faustctf',
         'USER': 'faustctf',
-        'PASSWORD': 'faustctf',
-        'CONN_MAX_AGE': 60
+        'PASSWORD': 'password',
+        'CONN_MAX_AGE': 20
     }
 }
 
@@ -44,7 +44,7 @@ DATABASES = {
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.PyLibMCCache',
-        'LOCATION': '',
+        'LOCATION': '127.0.0.1:11211',
         'TIMEOUT': 60
     }
 }
@@ -60,7 +60,7 @@ EMAIL_USE_TLS = False
 EMAIL_USE_SSL = False
 
 # Sender address for messages sent by the gameserver
-DEFAULT_FROM_EMAIL = ''
+DEFAULT_FROM_EMAIL = 'admin@example.com'
 
 # Filesystem path where user-uploaded files are stored
 # This directory must be served by the web server under the path defined by MEDIA_URL in 'base_settings.py'
@@ -82,7 +82,7 @@ SECRET_KEY = 'paolo'
 
 # Insert all hostnames your site is available under
 # See https://docs.djangoproject.com/en/1.8/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # The name of the time zone (i.e. something like "Europe/Berlin") in which dates should be displayed
 # See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for a list of valid options
