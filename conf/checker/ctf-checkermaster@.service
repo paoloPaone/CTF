@@ -7,7 +7,7 @@ Type=notify
 User=ctf-checkermaster
 EnvironmentFile=/etc/ctf-gameserver/checkermaster.env
 EnvironmentFile=-/etc/ctf-gameserver/checker/%i.env
-ExecStart=/usr/bin/ctf-checkermaster
+ExecStart=/usr/local/bin/ctf-checkermaster
 # Allow waiting for Checker Scripts to finish
 TimeoutStopSec=90
 Restart=on-failure
