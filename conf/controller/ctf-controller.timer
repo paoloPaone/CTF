@@ -4,7 +4,7 @@ After=network.target
 
 [Timer]
 OnBootSec=1min
-Unit=ctf-gameserver-controller.service
+Unit=ctf-controller.service
 
 [Install]
 WantedBy=multi-user.target
