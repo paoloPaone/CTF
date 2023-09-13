@@ -1,0 +1,90 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$36000$kHAF2GkRGCyG$qm+7EyJr0b8E9VbQWp3ZtfxaV0A5wIJSV/ABWEML6II=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Team1",
+            "first_name": "team1",
+            "last_name": "team1",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2023-06-22T18:21:28.622Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "pbkdf2_sha256$36000$xOKKVRJp772Y$YbUoJ0N2rDg3xndTwZv+jHKrIWcJ209dOUZij007eXg=",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "Team2",
+            "first_name": "team2",
+            "last_name": "team2",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2019-04-03T18:21:28.622Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    
+    {
+        "model": "registration.team",
+        "pk": 2,
+        "fields": {
+            "net_number":1,
+            "informal_email": "team1@example.org",
+            "image": "",
+            "affiliation": "",
+            "country": "IT",
+            "nop_team": false
+        }
+    },
+    {
+        "model": "registration.team",
+        "pk": 3,
+        "fields": {
+            "net_number": 2,
+            "informal_email": "team2@example.org",
+            "image": "",
+            "affiliation": "",
+            "country": "IT",
+            "nop_team": false
+        }
+    },
+    {
+        "model": "scoring.service",
+        "pk": 1,
+        "fields": {
+            "name": "fitty-fit",
+            "slug": "fittyfit"
+        }
+    },
+    
+    {
+        "model": "scoring.gamecontrol",
+        "pk": 1,
+        "fields": {
+            "competition_name": "My CTF (A/D)",
+            "tick_duration": 180,
+            "valid_ticks": 5,
+            "current_tick": -1,
+            "flag_prefix": "U29tZSBzdHJpbmcgZXhh",
+            "registration_open": false,
+            "services_public": "$SERVICE_PUBLIC_TIME",
+            "start": "$START_TIME",
+            "end": "$END_TIME"
+        }
+    }
+    
+    ]
+    
+    
