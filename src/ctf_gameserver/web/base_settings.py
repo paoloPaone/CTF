@@ -11,13 +11,18 @@ from django.contrib.messages import constants as messages
 
 # This file's directory, to conveniently build absolute paths using `os.path.join(BASE_DIR, )`
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# settings.py
 
-
-
-
+# Imposta la directory statica principale
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+# Imposta la directory in cui verranno raccolti i file statici (deve essere diversa da STATICFILES_DIRS)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Configura le directory dei file statici per lo sviluppo
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 HOME_URL = reverse_lazy('home_flatpage')
 THUMBNAIL_SIZE = (100, 100)
