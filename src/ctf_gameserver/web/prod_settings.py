@@ -25,7 +25,7 @@ CSP_POLICIES = {
 
 
 # Set to True if your site is available exclusively through HTTPS and not via plaintext HTTP
-HTTPS = True
+HTTPS = False
 
 
 # Your database settings
