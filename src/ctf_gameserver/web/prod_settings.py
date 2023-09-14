@@ -36,7 +36,7 @@ DATABASES = {
         'HOST': '10.20.0.1',
         'PORT': '5432',
         'NAME': 'faustctf',
-        'USER': 'gameserver_web',
+        'USER': 'postgres',
         'PASSWORD': 'password',
         'CONN_MAX_AGE': 20
     }
