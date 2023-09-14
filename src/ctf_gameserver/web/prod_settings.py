@@ -12,17 +12,20 @@ from ctf_gameserver.web.base_settings import *
 # http://www.html5rocks.com/en/tutorials/security/content-security-policy/ for an explanation
 # The initially selected directives should cover most sensitive cases, but still allow YouTube embeds,
 # webfonts etc.
+
+
 CSP_POLICIES = {
     'base-uri': ["'self'"],
     'connect-src': ["'self'"],
     'form-action': ["'self'"],
     'object-src': ["'none'"],
-    'script-src': ["'self'"],
+    'script-src': ["'self'", "'unsafe-inline'"],  # Aggiungi 'unsafe-inline' qui
     'style-src': ["'self'"]
 }
 
+
 # Set to True if your site is available exclusively through HTTPS and not via plaintext HTTP
-HTTPS = False
+HTTPS = True
 
 
 # Your database settings
@@ -30,10 +33,10 @@ HTTPS = False
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': '10.20.0.1',
+        'HOST': 'localhost',
         'PORT': '5432',
         'NAME': 'faustctf',
-        'USER': 'faustctf',
+        'USER': 'postgres',
         'PASSWORD': 'password',
         'CONN_MAX_AGE': 20
     }
