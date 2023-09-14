@@ -33,10 +33,10 @@ HTTPS = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'localhost',
+        'HOST': '10.20.0.1',
         'PORT': '5432',
         'NAME': 'faustctf',
-        'USER': 'postgres',
+        'USER': 'gameserver_web',
         'PASSWORD': 'password',
         'CONN_MAX_AGE': 20
     }
