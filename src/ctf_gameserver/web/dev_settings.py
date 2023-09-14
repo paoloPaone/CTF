@@ -14,13 +14,13 @@ from .base_settings import *
 
 
 
-
 CSP_POLICIES = {
-    # The debug error page uses inline JavaScript and CSS
-    'script-src': ["'self'", "'unsafe-inline'"],
-    'style-src': ["'self'", "'unsafe-inline'"],
-    'object-src': ["'self'"],
-    'connect-src': ["'self'"]
+    'base-uri': ["'self'"],
+    'connect-src': ["'self'"],
+    'form-action': ["'self'"],
+    'object-src': ["'none'"],
+    'script-src': ["'self'", "'unsafe-inline'"],  # Aggiungi 'unsafe-inline' qui
+    'style-src': ["'self'"]
 }
 
 
